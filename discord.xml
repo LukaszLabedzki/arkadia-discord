@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<AliasPackage>
+		<Alias isActive="yes" isFolder="no">
+			<name>wyslij wiadomosc</name>
+			<script>ra.discord:send_message(matches[2])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/discord_wyslij (.*)$</regex>
+		</Alias>
+
+		<Alias isActive="yes" isFolder="no">
+			<name>ustaw token</name>
+			<script>ra.discord:set_token(matches[2])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/discord_ustaw_token (.*)$</regex>
+		</Alias>
+
+		<Alias isActive="yes" isFolder="no">
+			<name>ustaw token</name>
+			<script>ra.discord:set_channel(matches[2])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/discord_ustaw_kanal (.*)$</regex>
+		</Alias>
+
+		<Alias isActive="yes" isFolder="no">
+			<name>ustaw token</name>
+			<script>ra.discord:show_data()</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/discord_pokaz_ustawienia$</regex>
+		</Alias>
+	</AliasPackage>
+
+	<TimerPackage>
+		<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+			<name>discord_timer</name>
+			<script>ra.discord:refresh()</script>
+			<command></command>
+			<packageName></packageName>
+			<time>00:00:01.000</time>
+		</Timer>
+	</TimerPackage>
+</MudletPackage>
